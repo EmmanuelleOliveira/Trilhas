@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração de elementos dos formulários</title>
+</head>
+<body>
+    <fieldset>
+        <h1>Formulários - demonstração de elementos</h1>
+        <p>
+            <label for="nome">Insira seu nome:</label>
+            <input type="text" id="nome" name="nome_usuario" value="" />
+        </p>
+        <p>
+            <label for="senha">Insira sua senha:</label>
+            <input type="password" id="senha" name="senha_usuario" value="" />
+        </p>
+        <p>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data_inserida" value="" />
+        </p>
+        <p>
+            <legend>Qual o seu sexo? </legend>
+            <div>
+                <input type="radio" id="sexo_feminino" name="sexo_usuario" value="feminino" />
+                <label for="sexo_feminino">Feminino</label>
+            </div>
+            <div>
+                <input type="radio" id="sexo_masculino" name="sexo_usuario" value="masculino" />
+                <label for="sexo_masculino">Masculino</label>
+            </div>
+        </p>
+        <p>
+            <legend>Qual(is) o(s) modo(s) de transporte que você utiliza na sua cidade?</legend>
+            <div>
+                <input type="checkbox" id="op_1" name="modo_transporte" value="onibus" />
+                <label for="op_1">Ônibus</label>
+            </div>
+            <div>
+                <input type="checkbox" id="op_2" name="modo_transporte" value="veiculo" />
+                <label for="op_2">Veículo próprio</label>
+            </div>
+            <div>
+                <input type="checkbox" id="op_3" name="modo_transporte" value="bicicleta" />
+                <label for="op_3">Bicicleta</label>
+            </div>
+            <div>
+                <input type="checkbox" id="op_4" name="modo_transporte" value="Apps" />
+                <label for="op_4">Aplicativos de transporte sob demanda</label>
+            </div>
+            <div>
+                <input type="checkbox" id="op_5" name="modo_transporte" value="taxi" />
+                <label for="op_5">Táxi convencional</label>
+            </div>
+        </p>
+        <p>
+            <label for="satisfacao">Em uma escala de 0 a 10, qual o seu nível de satisfação com o trânsito da sua cidade?</label> 
+            <input type="range" id="satisfacao" name="nota" min="0" max="10" />
+        </p>
+        <input type="reset" value="reset" />
+        <input type="submit" value="submit" />
+    </fieldset>
+</body>
+</html>

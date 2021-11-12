@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o Canvas</title>
+</head>
+<body onload="draw()">
+    <canvas id="canvas" width="1400" height="600" style="background-color:#FFE4B5;"></canvas>
+    <script>
+        function draw() {
+            var canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+                for(i=0; i<=8; i++) {
+                    ctx.beginPath();
+                    ctx.arc(100+150*i, 100, 50, 0, Math.PI * 2, true); 
+                    ctx.moveTo(135+150*i, 100);
+                    ctx.arc(100+150*i, 100, 35, 0, Math.PI, false);  
+                    ctx.moveTo(90+150*i, 90);
+                    ctx.arc(85+150*i, 90, 5, 0, Math.PI * 2, true);  
+                    ctx.moveTo(120+150*i, 90);
+                    ctx.arc(115+150*i, 90, 5, 0, Math.PI * 2, true);
+                    //Corpo 
+                    ctx.moveTo(100+150*i, 150);
+                    ctx.lineTo(100+150*i, 300); 
+                    //Pernas
+                    ctx.lineTo(150+150*i, 350);
+                    ctx.moveTo(100+150*i, 300);
+                    ctx.lineTo(50+150*i, 350);
+                    //Braços
+                    ctx.moveTo(100+150*i, 200);
+                    ctx.lineTo(150+150*i,150);
+                    ctx.moveTo(100+150*i, 200);
+                    ctx.lineTo(75+150*i, 200);
+                    ctx.lineTo(100+150*i, 225);
+                    ctx.stroke();
+                    ctx.beginPath();
+                }
+                //Bandeiras superiores
+                for(j=0; j<46; j++){
+                    ctx.fillStyle='rgb(' + Math.floor(0 + 5 * j) + ', ' +
+                       Math.floor(255 - 5 * j) + ',' + Math.floor(255 - 5 * j) + ')';
+                    ctx.beginPath();
+                    ctx.moveTo(30*j, 0);
+                    ctx.lineTo(15+30*j, 15);
+                    ctx.lineTo(30+30*j, 0);
+                    ctx.fill();
+                }
+                //Bandeiras inferiores
+                for(j=0; j<46; j++){
+                    ctx.fillStyle='rgb(' + Math.floor(0 + 5 * j) + ', ' +
+                       Math.floor(255 - 5 * j) + ',' + Math.floor(255 - 5 * j) + ')';
+                    ctx.beginPath();
+                    ctx.moveTo(30*j, 400);
+                    ctx.lineTo(15+30*j, 385);
+                    ctx.lineTo(30+30*j, 400);
+                    ctx.fill();
+                }
+                ctx.font = '80px serif';
+                ctx.fillText('Exemplo Canvas - Emmanuelle', 200, 525);
+                //Bandeiras inferiores
+                for(j=0; j<46; j++){
+                    ctx.fillStyle='rgb(' + Math.floor(0 + 5 * j) + ', ' +
+                       Math.floor(255 - 5 * j) + ',' + Math.floor(255 - 5 * j) + ')';
+                    ctx.beginPath();
+                    ctx.moveTo(30*j, 600);
+                    ctx.lineTo(15+30*j, 585);
+                    ctx.lineTo(30+30*j, 600);
+                    ctx.fill();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
