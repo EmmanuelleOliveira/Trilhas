@@ -1,0 +1,50 @@
+#solida-curva {
+    border: 3px solid rgb(212, 40, 92);
+    padding: 25px;
+    color: rgb(212, 40, 92);
+    border-radius: 10px;
+}
+
+#pontilhada {
+    border: dotted rgba(168, 119, 218, 0.6);
+    border-top-width: 10px;
+    border-right-width: 8px;
+    border-bottom-width: 6px;
+    border-left-width: 4px;
+    padding: 10px;
+    color: rgba(168, 119, 218, 0.6);
+}
+
+#dupla {
+    border-style: double;
+    border-radius: 0px 10px 0px 10px;
+    border-width: 15px;
+    border-top-color: turquoise;
+    border-right-color: rgb(253, 141, 253);
+    border-bottom-color: rgb(252, 252, 117);
+    border-left-color: rgb(210, 255, 121);
+    color: turquoise;
+}
+
+#tracejada {
+    border: dashed 5px rgb(255, 149, 10);
+    border-radius: 10px;
+    border-right-style: hidden;
+    border-left-style:hidden;
+    color:rgb(255, 149, 10);
+}
+
+#ridge {
+    border: ridge 6px rgb(247, 99, 99);
+    color: rgb(247, 99, 99);
+    border-radius: 40px;
+}
+
+h1 {
+    color:rgb(34, 248, 127);
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}

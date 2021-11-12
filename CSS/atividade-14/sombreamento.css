@@ -1,0 +1,17 @@
+#foto {
+    background-image: url(we.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 1vh;
+    left: 50vh;
+    width: 200px;
+    height: 200px;
+    border: 5px;
+    border-radius: 100%;
+    box-shadow: 0 0 3em rgb(243, 221, 99), 0 0 3em rgb(247, 103, 103);
+}
+
+h1 {
+    color: rgb(240, 23, 142);
+}

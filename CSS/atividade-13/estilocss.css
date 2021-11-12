@@ -1,0 +1,26 @@
+body{
+    display: flex;
+}
+.visible{
+    overflow: visible;
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.scroll{
+    overflow: scroll;
+}
+
+.auto{
+    overflow: auto;
+}
+
+p{
+    border: 2px dotted crimson;
+    height: 150px;
+    width: 60px;
+    margin:30px;
+    background-color: lightblue;
+}

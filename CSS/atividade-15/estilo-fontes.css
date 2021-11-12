@@ -1,0 +1,55 @@
+body {
+    font-size: 10px;
+}
+    
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    text-align: center;
+    background: rgb(26,128,26);
+    background: linear-gradient(0deg, rgba(26,128,26,1) 20%, rgba(245,254,27,1) 45%, rgba(255,0,0,1) 66%);
+    border-radius: 10px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+img {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    padding-left: 340px;
+    height: 350px;
+    padding-right: 340px;
+}
+
+.under {
+    text-decoration: underline red solid 3px;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.clean {
+    text-decoration: none;
+}
+
+a {
+    color: red;
+}
+
+.lista {
+    text-decoration: underline solid 3px rgba(245,254,27,1);
+    font-weight: bold;
+}
+

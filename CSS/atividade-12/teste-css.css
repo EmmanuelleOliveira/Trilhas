@@ -1,0 +1,36 @@
+#serieone {
+    color: salmon;
+    border: 2px solid salmon;
+}
+
+#serietwo {
+    color: cyan;
+    border: 2px solid cyan;
+}
+
+#seriesthree {
+    color: red;
+    border: 2px solid red;
+}
+    
+.series {
+        border: 5px solid #A020F0;
+        background-color: mediumaquamarine;
+}
+
+[title] {
+    color:gold;
+}
+
+h1:hover{
+    color:indianred;
+}
+
+a::after{
+    content: " - Wikipedia";
+    color:lightyellow;
+}
+
+.series p{
+    background-color:rgb(41, 39, 39);
+}

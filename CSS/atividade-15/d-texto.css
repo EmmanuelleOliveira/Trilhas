@@ -1,0 +1,19 @@
+.inline {
+    inline-size: 550px;
+    text-align: justify;
+}
+
+.vertical {
+    writing-mode: vertical-lr;
+    border:black 2px solid;
+    margin: 50px;
+}
+
+.horizontal {
+    writing-mode: horizontal-tb;
+}
+
+body{
+    justify-content: space-around;
+    display: flex;
+}

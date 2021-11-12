@@ -1,0 +1,30 @@
+#estilo-solido {
+    background-color: rgb(241, 166, 178);
+}
+
+#estilo-transparencia {
+    background-color: rgba(186, 85, 211, 0.5);
+}
+
+#estilo-gradiente{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+#imagem-repetida {
+    background-image:url(coracoes.jpg);
+    background-repeat: repeat;
+    background-size: 500px 500px;
+}
+
+#imagem-unica {
+    background-image: url(vampire.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: rgb(180, 248, 177);
+}
+
+h1 {
+    color: rgb(253, 127, 175);
+    text-align: center;
+}

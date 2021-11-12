@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 60px;
+}
+
+h3{
+    color: grey;
+}
+
+ul{
+    color:cyan;
+}

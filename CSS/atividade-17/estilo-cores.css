@@ -1,0 +1,233 @@
+h1 {
+    text-align: center;
+    background: rgb(143,0,255);
+    background: linear-gradient(0deg, rgba(143,0,255,0.5018382352941176) 11%, rgba(75,0,130,0.5046393557422969) 21%, rgba(0,0,255,0.5046393557422969) 34%, rgba(0,255,0,0.5018382352941176) 47%, rgba(255,255,0,0.5046393557422969) 64%, rgba(255,165,0,0.5018382352941176) 86%, rgba(255,0,0,0.4990371148459384) 92%);
+}
+
+.borda {
+    border: 2px solid currentColor;
+}
+
+#hexa-vermelho {
+    background-color: #ff0000;
+}
+
+#hexa-laranja {
+    background-color: #ffa500;
+}
+
+#hexa-amarelo {
+    background-color: #ffff00;
+}
+
+#hexa-verde {
+    background-color: #00ff00;
+}
+
+#hexa-azul {
+    background-color: #0000ff;
+}
+
+#hexa-anil {
+    background-color: #4b0082;
+}
+
+#hexa-violeta {
+    background-color: #8f00ff;
+}
+
+#hexa-transp-vermelho {
+    background-color: #ff0000dd;
+}
+
+#hexa-transp-laranja {
+    background-color: #ffa500bb;
+}
+
+#hexa-transp-amarelo {
+    background-color: #ffff0099;
+}
+
+#hexa-transp-verde {
+    background-color: #00ff0077;
+}
+
+#hexa-transp-azul {
+    background-color: #0000ff55;
+}
+
+#hexa-transp-anil {
+    background-color: #4b008233;
+}
+
+#hexa-transp-violeta {
+    background-color: #8f00ff11;
+}
+
+#rgb-01 {
+    background-color: rgb(179, 84, 81);
+}
+
+#rgb-02 {
+    background-color: rgb(197, 92, 89);
+}
+
+#rgb-03 {
+    background-color: rgb(217, 101, 98);
+}
+
+#rgb-04 {
+    background-color: rgb(239, 111, 108);
+}
+
+#rgb-05 {
+    background-color: rgb(240, 124, 121);
+}
+
+#rgb-06 {
+    background-color: rgb(241, 136, 133);
+}
+
+#rgb-07 {
+    background-color: rgb(242, 147, 144);
+}
+
+#rgba-01 {
+    background-color: rgba(179, 84, 81, 0.2);
+}
+
+#rgba-02 {
+    background-color: rgba(197, 92, 89, 0.3);
+}
+
+#rgba-03 {
+    background-color: rgba(217, 101, 98, 0.4);
+}
+
+#rgba-04 {
+    background-color: rgba(239, 111, 108,0.5);
+}
+
+#rgba-05 {
+    background-color: rgba(240, 124, 121,0.6);
+}
+
+#rgba-06 {
+    background-color: rgba(241, 136, 133, 0.7);
+}
+
+#rgba-07 {
+    background-color: rgba(242, 147, 144, 0.9);
+}
+
+#hsl-01 {
+    background-color: hsl(186, 61%, 56%);
+}
+
+#hsl-02 {
+    background-color: hsl(186, 77%, 61%);
+}
+
+#hsl-03 {
+    background-color: hsl(185, 100%, 67%);
+}
+
+#hsl-04 {
+    background-color: hsl(204, 49%, 73%);
+}
+
+#hsl-05 {
+    background-color: hsl(264, 23%, 73%);
+}
+
+#hsl-06 {
+    background-color: hsl(309, 27%, 70%);
+}
+
+#hsl-07 {
+    background-color: hsl(308, 27%, 73%);
+}
+
+#hsla-01 {
+    background-color: hsla(186, 61%, 56%, 0.3);
+}
+
+#hsla-02 {
+    background-color: hsla(186, 77%, 61%, 0.4);
+}
+
+#hsla-03 {
+    background-color: hsla(185, 100%, 67%, 0.5);
+}
+
+#hsla-04 {
+    background-color: hsla(204, 49%, 73%, 0.6);
+}
+
+#hsla-05 {
+    background-color: hsla(264, 23%, 73%, 0.7);
+}
+
+#hsla-06 {
+    background-color: hsla(309, 27%, 70%, 0.8);
+}
+
+#hsla-07 {
+    background-color: hsla(308, 27%, 73%, 0.7);
+}
+
+#cor-01 {
+    background-color: crimson;
+}
+
+#cor-02 {
+    background-color: darkcyan;
+}
+
+#cor-03 {
+    background-color: darkorange;
+}
+
+#cor-04 {
+    background-color: darkslategray;
+}
+
+#cor-05 {
+    background-color: darkviolet;
+}
+
+#cor-06 {
+    background-color: teal;
+}
+
+#cor-07 {
+    background-color: palevioletred;
+}
+
+#vermelho {
+    color: #ff0000;
+}
+
+#laranja {
+    color: #ffa500;
+}
+
+#amarelo {
+    color: #ffff00;
+}
+
+#verde {
+    color: #00ff00;
+}
+
+#azul {
+    color: #0000ff;
+}
+
+#anil {
+    color: #4b0082;
+}
+
+#violeta {
+    color: #8f00ff;
+}
