@@ -240,6 +240,7 @@ h2 {
     position: relative;
     width: 505px;
     height: 290px;
+    outline: none;
 }
 
 #icons {
