@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5DAF0;
+    display: flex;
+    flex-direction: column;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(./fonts/Raleway-VariableFont_wght.ttf);
+}
+
+#title {
+    text-align: center;
+    padding: 10px;
+    font-size: 34px;
+    color: #470099;
+}
+
+#photo_me {
+    width: 320px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+#personal_info {
+    width: 80%;
+    border: 2px solid ;
+    border-radius: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #470099;
+}
+
+#text_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 30px;
+}
+
+#name_hobby {
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+#description {
+    text-align: justify;
+    padding: 0px 42px;
+    font-size: 18px;
+    
+}
+
+#duolingo {
+    text-decoration: none;
+    margin: 0px 42px;
+    font-size: 18px;
+}
+
+#duolingo:hover {
+    color: #58cc02;
+}
+
+#duo {
+    width: 70px;
+}
+
+

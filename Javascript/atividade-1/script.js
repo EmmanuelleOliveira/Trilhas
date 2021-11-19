@@ -1,0 +1,10 @@
+document.getElementById("title").innerHTML="Meu hobby";
+document.getElementById("photo_me").setAttribute('src', './images/manu.jpeg');
+document.getElementById("name").innerHTML="Emmanuelle Flora Amaral Barbosa de Oliveira";
+document.getElementById("age").innerHTML="27 anos";
+document.getElementById("state").innerHTML="Arcoverde - PE";
+document.getElementById("name_hobby").innerHTML="Aprender um novo idioma é o meu hobby favorito";
+document.getElementById("description").innerHTML=("Com o auxílio do aplicativo Duolingo, músicas e séries, eu sempre dedico algum tempo do meu dia para aprender um idioma. Atualmente eu estou mais focada no inglês e no turco, mas vi espanhol no meu ensino médio e ele está na minha lista de aperfeiçoamento e aprendizagem.");
+document.getElementById("duolingo").setAttribute('href', 'https://pt.duolingo.com/');
+document.getElementById("duolingo").innerHTML=("Comece a aprender um idioma com o Duolingo clicando aqui");
+document.getElementById("duo").setAttribute('src', './images/duolingo.png');
