@@ -1,5 +1,4 @@
 document.querySelector("h1").innerHTML="Florence + the Machine";
-document.querySelector(".background").src = "./images/florence.mp4";
 document.querySelector("#name").innerHTML="Emmanuelle Oliveira";
 document.querySelector("#age").innerHTML="27 anos";
 document.querySelector("#city").innerHTML="Arcoverde - PE";
