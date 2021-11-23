@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #17531B;
+}
+
+a:hover{
+    color: #940404;
+} 
+
+@font-face {
+    font-family: lobster;
+    src: url(./assets/fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: amiri;
+    src: url(./assets/fonts/Amiri-Regular.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-family: amiri, serif;
+    width: 100%;
+    background-color: #CA976B;
+    color: #003455;
+}
+
+h1 {
+    font-family: lobster, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+#dog1{
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    margin: 30px 0;
+    border-bottom: 3px solid;
+}
+
+main {
+    width: 80%;
+    margin: auto 10%;
+    text-align: justify;
+}
+
+#readmore {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h2{
+    text-decoration: 3px underline;
+}
+
+#picture {
+    width: 40%;
+    margin: 20px 30%;
+    border: 3px solid #003455;
+}
