@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: noto;
+    src: url(./assets/fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+
+a {
+    text-decoration: none;
+    color: #772552;
+    font-family: noto, sans-serif;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #005A22;
+}
+
+ul, li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffd71d;
+}
+
+#logo {
+    width: 100px;
+    padding-left: 15px;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu li a {
+    padding-right: 15px;
+}
+
+main {
+    width: 80%;
+    margin: 15px 10%;
+    font-family: montserrat, sans-serif;
+}
+
+h2 {
+    color: #772552;
+    text-align: center;
+}
+
+#ps {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#form-area {
+    display: flex;
+    justify-content: center;
+    background-color: #63D25E;
+    color: #772552;
+    border-radius: 12px;
+    margin-top: 15px;
+    background-image: url(./assets/images/background-form.png);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+}
+
+#form label {
+    margin: 10px 0;
+}
+
+#name {
+    width: 300px;
+    border-radius: 12px;
+    padding-left: 5px;
+    font-family: montserrat, sans-serif;
+    border: none;
+}
+
+#message {
+    width: 300px;
+    height: 150px;
+    border-radius: 12px;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-family: montserrat, sans-serif;
+    border: none;
+}
+
+#button {
+    margin: 10px 0;
+    border-radius: 12px;
+    width: 50px;
+    height: 30px;
+    font-family: montserrat, sans-serif;
+    margin-left: 250px;
+    color: #772552;
+    cursor: pointer;
+    background-color: #ffd71d;
+    border: none;
+}
+
+#show-coments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-coments {
+    width: 100%;
+    border: 1px solid #63D25E;
+    border-radius: 12px;
+    padding: 0 8px;
+    margin-top: 15px;
+}
+
+#show-name {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+#show-message {
+    font-size: 16px;
+    color: #005A22;
+    margin-bottom: 8px;
+}
