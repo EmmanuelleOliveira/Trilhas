@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: comforta;
+    src: url(./fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: comforta, Verdana, Geneva, Tahoma, sans-serif;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+h1 {
+    text-align: center;   
+    margin-top: 10px;
+    color: rgb(238, 62, 91);
+}
+
+.btn {
+    background-image: linear-gradient(to right, #EC6F66 0%, #F3A183  51%, #EC6F66  100%);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    font-family: comforta, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+}
+
+.btn:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}
+
+#calculator {
+    display: flex;
+    width: 70%;
+    margin: 20px 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #fcb69f;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #EC6F66 0%, #F3A183  51%, #EC6F66  100%);
+    color: white;
+    font-family: comforta, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+#operations {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px 10px 0;
+}
+
+#number-2{
+    margin-top: 20px;
+}
+
+#number-1{
+    margin-top: 20px;
+}
+
+#up {
+    margin-bottom: 5px;
+}
+
+#equal {
+    margin: 20px 10px;
+}
+
+#clr {
+    margin: 20px 10px;
+}
+
+::placeholder {
+    color: white;
+    padding-left: 3px;
+    font-size: 20px;
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="calculator">
+        <input type="number" id="number-1" class="numbers" placeholder="Primeiro número">
+        <div id="operations">
+            <div id="up">
+                <button type="button" class="btn" id="add" onclick="add()" value="+">+</button>
+                <button type="button" class="btn" id="sub" onclick="sub()" value="-">-</button>
+            </div>
+            <div id="down">
+                <button type="button" class="btn" id="mult" onclick="mult()" value="*">*</button>
+                <button type="button" class="btn" id="div" onclick="div()" value="/">/</button>
+            </div>
+        </div>
+        <input type="number" id="number-2" class="numbers" placeholder="Segundo número">
+        <button type="button" class="btn" id="equal" onclick="rst()">=</button>
+        <div id="result" class="numbers"></div>
+        <button type="button" class="btn" id="clr" onclick="clr()">C</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
