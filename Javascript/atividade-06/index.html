@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img id="imgheader" src="./assets/images/logo.png">
+    </header>
+    <main>
+        <section id="form">
+            <h2>Monte seu hamburguer</h2> </br>
+            <div id="option-bread">
+                <form action="/">
+                    <legend>Escolha o tipo de pão</legend> </br>
+                    <input type="radio" id="bf" name="breadtype" value="3">
+                    <label for="pf">Pão francês (R$3,00)</label> </br>
+                    <input type="radio" id="ba" name="breadtype" value="8">
+                    <label for="pa">Pão australiano (R$8,00)</label> </br>
+                    <input type="radio" id="bb" name="breadtype" value="6">
+                    <label for="pb">Pão de brioche (R$6,00)</label> </br>
+                </form> </br>
+            </div>
+            <div id="option-meat">
+                <form action="/">
+                    <legend>Escolha o tipo de hambúrguer</legend> </br>
+                    <input type="radio" id="mp" name="meattype" value="13">
+                    <label for="mp">Hambúrguer de picanha (R$13,00)</label> </br>
+                    <input type="radio" id="mc" name="meattype" value="10">
+                    <label for="mc">Hambúrguer de costela (R$10,00)</label> </br>
+                    <input type="radio" id="mv" name="meattype" value="12">
+                    <label for="mv">Hambúrguer vegano (R$12,00)</label> </br>
+                </form> </br>
+            </div>
+            <div id="option-salad">
+                <form action="/">
+                    <legend>Escolha o tipo de salada</legend> </br>
+                    <input type="radio" id="sa" name="saladtype" value="1.5">
+                    <label for="sa">Alface (R$1,50)</label> </br>
+                    <input type="radio" id="st" name="saladtype" value="1.5">
+                    <label for="st">Tomate (R$1,50)</label> </br>
+                    <input type="radio" id="ss" name="saladtype" value="0">
+                    <label for="ss">Sem salada (R$0,00)</label> </br>
+                </form> </br>
+            </div>
+            <div id="option-cheese">
+                <form action="/">
+                    <legend>Escolha o tipo de queijo</legend> </br>
+                    <input type="radio" id="cm" name="cheesetype" value="3">
+                    <label for="cm">Mussarela (R$3,00)</label> </br>
+                    <input type="radio" id="cp" name="cheesetype" value="3">
+                    <label for="cp">Prato (R$3,00)</label> </br>
+                    <input type="radio" id="cc" name="cheesetype" value="5">
+                    <label for="cc">Cheddar (R$5,00)</label> </br>
+                </form>
+            </div>
+            <button id="btn" class="btn" type="button" onclick="send()">Enviar</button>
+        </section>
+        <section id="order"></section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
