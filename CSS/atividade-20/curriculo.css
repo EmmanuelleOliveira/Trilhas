@@ -46,7 +46,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: normal;
     margin-top: 0px;
 }
@@ -56,17 +56,18 @@ h4 {
     text-align: center;
     margin: 0px;
     padding-top: 2%;
+    margin-bottom: 15px;
 }
 
 p{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-align: justify;
     padding: 2%;
     margin:0px;
 }
 
 span{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-align: justify;
     padding: 1.5%;
 }
@@ -125,6 +126,7 @@ aside img {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    border-right: 2px solid black;
 }
 
 .right {
