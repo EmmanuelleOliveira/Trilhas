@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício do while</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Utilizando o while para repetir uma frase no quadro do Bart</h1>
+    <section id="screen">
+        <div class="blackboard">
+            <img id="bart" src="./assets/images/bart.png" alt="Bart observador">
+            <div id="phrases"></div>
+        </div>
+        <div id="right">
+            <form action="/">
+                <legend>Informe a quantidade de vezes que a frase será repetida:</legend>
+                <input type="number" id="num" min="0">
+                <button type="button" id="btn" onclick="send()">Escrever</button> 
+            </form> 
+            <p>O número de vezes que o quadro foi apagado: <span id="erase">0</span></p>
+            <p>O quadro possui <span id="lines">0</span> linha(s) escritas</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
