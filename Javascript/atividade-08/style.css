@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url(./assets/fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: varelaround;
+    src: url(./assets/fonts/VarelaRound-Regular.ttf);
+}
+
+body {
+    background-color: #53565d;
+    font-family: varelaround, serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-family: lobster, cursive;
+    color: white;
+    font-size: 40px;
+}
+
+h2 {
+    margin-top: 15px;
+    padding-left: 10px;
+    color: white;
+} 
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    padding-left: 10px;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+#up {
+    height: 30vh;
+    border-bottom: 10px dashed white;
+    border-top: 10px solid white;
+}
+
+#middle {
+    height: 30vh;
+    border-bottom: 10px dashed white;
+}
+
+#laps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px; 
+    height: 20vh;
+}
+
+
+.btn {background-image: linear-gradient(to right, #F00000 0%, #DC281E  51%, #F00000  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;            
+    border-radius: 10px;
+    font-family: varelaround, serif;
+}
+
+.btn:hover {
+   background-position: right center; 
+   color: #fff;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+#results {
+    border-bottom: 10px solid white;
+    height: 30vh;
+}
