@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: comfortaa;
+    src: url(./assets/fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+body{
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    font-family: comfortaa, serif;
+    color: #6610AC;
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+#info-show-vector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#changes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#show-num {
+    margin-top: 10px;
+}
+
+#numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.num {
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+    border: 1px solid #6610AC;
+    font-family: comfortaa, serif;
+    font-weight: bold;
+    color: #6610AC;
+    font-size: 18px;
+    text-align: center;
+}
+
+.btn {
+    margin: 10px;
+    background-image: linear-gradient(to right, #FF5F6D 0%, #FFC371  51%, #FF5F6D  100%);
+    padding: 15px 45px;
+    border: 1px solid #6610AC;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;           
+    border-radius: 10px;
+    display: block;
+    font-family: comfortaa, serif;
+    font-weight: bold;
+    color: #6610AC;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+}

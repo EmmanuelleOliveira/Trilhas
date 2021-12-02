@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Array</h1>
+    </header>
+    <main>
+        <div id="info-show-vector">
+            <form id="numbers">
+                <input type="number" id="n1" class="num" placeholder="Insira o primeiro número">
+                <input type="number" id="n2" class="num" placeholder="Insira o segundo número">
+                <input type="number" id="n3" class="num" placeholder="Insira o terceiro número">
+                <input type="number" id="n4" class="num" placeholder="Insira o quarto número">
+            </form>
+            <button id="send" class="btn" onclick="save()">Enviar</button>
+            <div id="show-num"></div>
+        </div>
+        <div id="changes">
+            <button class="btn" onclick="organize()">Reorganize</button>
+            <div id="changes-reorganize"></div>
+            <button class="btn" onclick="ascending()">Ordem crescente</button>
+            <div id="changes-ascending"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
