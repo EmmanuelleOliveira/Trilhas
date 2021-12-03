@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da velha</h1>
+    </header>
+    <main>
+        <div id="line1" class="line">
+            <div class="column" id="c00" onclick="move(0,0,id)"></div>
+            <div class="column" id="c01" onclick="move(0,1,id)"></div>
+            <div class="column" id="c02" onclick="move(0,2,id)"></div>
+        </div>
+        <div id="line2" class="line">
+            <div class="column" id="c10" onclick="move(1,0,id)"></div>
+            <div class="column" id="c11" onclick="move(1,1,id)"></div>
+            <div class="column" id="c12" onclick="move(1,2,id)"></div>
+        </div>
+        <div id="line3" class="line">
+            <div class="column" id="c20" onclick="move(2,0,id)"></div>
+            <div class="column" id="c21" onclick="move(2,1,id)"></div>
+            <div class="column" id="c22" onclick="move(2,2,id)"></div>
+        </div>
+        <div id="results"></div>
+        <button type="button" id="btn" onclick="reset()">Recomeçar</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

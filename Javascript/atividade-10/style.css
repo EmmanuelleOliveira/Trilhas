@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: comfortaa;
+    src: url(./assets/fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: rgb(22, 21, 21);
+    font-family: comfortaa,serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 15px;
+    color: rgb(0, 255, 106);
+}
+
+#results {
+    text-align: center;
+    margin: 15px;
+    color: rgb(0, 255, 106);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#line2 {
+    border-top: 2px solid rgb(0, 255, 106);
+    border-bottom: 2px solid rgb(0, 255, 106);
+}
+
+.line {
+    width: 450px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#c01, #c11, #c21 {
+    border-left: 2px solid rgb(0, 255, 106);
+    border-right: 2px solid rgb(0, 255, 106);
+}
+
+#btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(0, 255, 106);
+    font-family: comfortaa, serif;
+    font-weight: bold;
+}
+
