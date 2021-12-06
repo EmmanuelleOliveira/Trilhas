@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida de carros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Corrida automobilística</h1>
+    <main>
+        <section id="up">
+            <h2>Informações dos competidores:</h2>
+            <p id="pedro"></p>
+            <p id="juca"></p>
+            <p id="edna"></p>
+        </section>
+        <section id="middle">
+            <h2>Selecione o número de voltas:</h2>
+            <div id="laps">
+                <button type="button" class="btn" id="cr" onclick="run(10)">Corrida rápida (10 voltas)</button>
+                <button type="button" class="btn" id="gp" onclick="run(70)">Grande prêmio (70 voltas)</button>
+                <button type="button" class="btn" id="en" onclick="run(160)">Enduro (160 voltas)</button>
+            </div>
+        </section>
+        <section id="results">
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
