@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de juros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de juros</h1>
+    </header>
+    <section id="customerdebtsadd">
+        <h2>Insira as informações do cliente</h2>
+        <form action="/">
+            <input id="name" type="text" placeholder="Nome do cliente"/>
+            <input id="date" type="date"/>
+            <input id="debt" type="number" min="0" placeholder="Valor"> 
+        </form>
+        <button type="button" class="btn" id="btninsert" onclick="add()">Inserir</button>
+        <div id="error"></div>
+    </section>
+    <section id="listdebts">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Vencimento</th>
+                    <th>Valor</th>
+                    <th>Juros(%)</th>
+                    <th>Juros(R$)</th>
+                    <th>Total a pagar</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+            </tbody>
+        </table>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
