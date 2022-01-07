@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: source;
+    src: url(./assets/fonts/SourceSans3-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: source, sans-serif;
+    background-color: #383f37;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+}
+
+header {
+    text-align: center;
+    color: #1db079;
+}
+
+input {
+    border-radius: 10px;
+    width: 600px;
+    height: 30px;
+    padding-left: 5px;
+    font-family: source, sans-serif;
+    font-size: 18px;
+    border: 1px solid #383f37;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+th {
+    padding: 5px 20px;
+}
+
+td {
+    border-top: 1px solid #383f37;
+    text-align: center;
+}
+
+table {
+    border-radius: 10px 10px 0 0;
+    border-collapse: collapse;
+}
+
+#customerdebtsadd, #listdebts, #options {
+    color: #383f37;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1db079;
+    width: 70%;
+    min-width: 650px;
+    margin: 0 15%;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+#buttonsAdd{
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn {
+    background-image: linear-gradient(to right, #383f37 0%, #1db079  51%, #383f37  100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    border: 0.5px solid #383f37;
+}
+
+.btn:hover {
+   background-position: right center; 
+   color: #fff;
+}
