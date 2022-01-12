@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de juros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de juros</h1>
+    </header>
+    <section id="customerdebtsadd">
+        <h2>Insira as informações do cliente</h2>
+        <form action="/">
+            <input class="informations" id="name" type="text" placeholder="Nome do cliente"/>
+            <input class="informations" id="date" type="date"/>
+            <input class="informations" id="debt" type="number" min="0" placeholder="Valor"> 
+        </form>
+        <button type="button" class="btn" id="btninsert" onclick="add()">Inserir</button>
+        <div id="error"></div>
+    </section>
+    <section id="listdebts">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Vencimento</th>
+                    <th>Valor</th>
+                    <th>Juros(%)</th>
+                    <th>Juros(R$)</th>
+                    <th>Total a pagar</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+            </tbody>
+        </table>
+    </section>
+    <section id="options">
+        <div id="buttonsAdd">
+            <button type="button" class="btn" id="btnName" onclick="joinName()">Agrupar por nome</button>
+            <button type="button" class="btn" id="btnDate" onclick="joinDate()">Agrupar por data</button>
+        </div>
+        <div id="insertEmpty"></div>
+    </section>
+    <section id="filters">
+        <h2>Filtros</h2>
+        <div id="filterSelect">
+            <div class="filterOption">
+                <p class="inputText">Data inicial</p>
+                <input type="date" placeholder="Data inicial" class="textFilter" id="initialDate">
+            </div>
+            <div class="filterOption">
+                <p class="inputText">Data final</p>
+                <input type="date" placeholder="Data final" class="textFilter" id="finalDate">
+            </div>
+            <div class="filterOption">
+                <p class="inputText">Valor mínimo</p>
+                <input type="number" min="0" placeholder="Valor mínimo" class="textFilter" id="valueMin">
+            </div>
+            <div class="filterOption">
+                <p class="inputText">Valor máximo</p>
+                <input type="number" min="0" placeholder="Valor máximo" class="textFilter" id="valueMax">
+            </div>
+        </div>
+        <div id="infoEmpty"></div>
+        <button type="button" class="btn" id="btnFilter" onclick="filterInfo()">Aplicar</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
