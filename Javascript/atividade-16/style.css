@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+body{
+    font-family: roboto,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    background-color: rgba(235, 235, 61, 0.815);
+    color: #145e33; 
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#mega {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#raffleResult{
+    margin: 20px 0;
+    font-size: 1.6rem;
+    display: flex;
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ball{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#raffleBtn {
+    background-image: linear-gradient(to right, #145e33 0%, rgba(235, 235, 61, 0.815)  51%, #145e33  100%);
+    padding: 5px 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    display: block;
+    font-family: roboto,Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+#raffleBtn:hover {
+   background-position: right center; 
+   text-decoration: none;
+}
