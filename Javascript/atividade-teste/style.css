@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+body{
+    font-family: roboto,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    background-color: rgba(235, 235, 61, 0.815);
+    color: #145e33; 
+    width: 100vw;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#mega {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20vw;
+}
+
+#raffleResult{
+    margin: 20px 0;
+    font-size: 1.6rem;
+    display: flex;
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ball{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#raffle-btn {
+    background-image: linear-gradient(to right, #145e33 0%, rgba(235, 235, 61, 0.815)  51%, #145e33  100%);
+    padding: 5px 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    display: block;
+    font-family: roboto,Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+#raffle-btn:hover {
+   background-position: right center; 
+   text-decoration: none;
+}
+
+#statistics {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#last-games, #numbers-frequency{
+    font-size: 1rem;
+    border: 1px solid #145e33;
+    margin: 5px;
+    border-collapse: collapse;
+}
+
+th{
+    padding: 5px;
+}
+
+td{
+    border-top: 1px solid #145e33;
+}
+
+#datas, #numbers-sequency{
+    text-align: center;
+}
