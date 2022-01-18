@@ -1,4 +1,6 @@
-function makeSizer(size) {
+let size = 14;
+
+function makeSizer() {
     function smaller() {
         size -= 1;
         document.body.style.fontSize = size + 'px';
@@ -13,8 +15,8 @@ function makeSizer(size) {
     }
   }
   
-  const menos = makeSizer(16);
-  const mais = makeSizer(16);
+  const menos = makeSizer();
+  const mais = makeSizer();
   
   document.getElementById('smaller').onclick = menos.decrement;
   document.getElementById('bigger').onclick = mais.increment;
