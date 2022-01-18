@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    margin: 5px 100px;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: rgb(239, 253, 253);
+}
+
+#smaller, #bigger {
+    border:none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: rgb(247, 152, 171);
+}
+
+#font-size {
+    margin-top: 10px;
+}
