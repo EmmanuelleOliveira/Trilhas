@@ -13,9 +13,7 @@ function raffle () {
             const min = 1;
             let number = Math.floor (Math.random() * (max - min + 1)) + min; //Sorteia um número entre 1 e 60
             while (vector.indexOf(number) !== -1){ //Verifica se o número sorteado já saiu
-                console.log(number);
                 number = Math.floor (Math.random() * (max - min + 1)) + min;
-                console.log(number);
             } 
             vector.push(number);
             raffleResult.innerHTML += `<div id="ball">${vector[vector.length - 1]}</div>`;
