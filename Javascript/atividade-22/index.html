@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cotação de moedas</h1>
+    <label for="select-coin">Escolha uma moeda: </label>
+    <select name="coin-type" id="coin"></select>
+    <div id="coin-info"></div>
+    <h2>Insira o período para busca das cotações</h2>
+    <div id="search">
+        <label for="initial">Data inicial:</label>
+        <input type="date" id="initial-date">
+        <label for="final">Data final:</label>
+        <input type="date" id="final-date">
+        <button id="btn-search" type="button">Buscar</button>
+    </div>
+    <div id="results-search">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Moeda</th>
+                    <th>Valor máximo (R$)</th>
+                    <th>Valor mínimo (R$)</th>
+                    <th>Valor de compra (R$)</th>
+                    <th>Valor de venda (R$)</th>
+                    <th>Variação (R$)</th>
+                    <th>Porcentagem de variação</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="body-results"></tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

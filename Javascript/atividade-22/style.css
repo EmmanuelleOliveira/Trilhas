@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+@font-face {
+    font-family: comforta;
+    src: url(./fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+body {
+    width: 70%;
+    margin: 0 15%;
+    min-width: 700px;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+    font-family: comforta, 'Times New Roman', Times, serif;
+}
+
+th{
+    padding: 5px;
+}
+
+td{
+    border-top: 1px solid white;
+    text-align: center;
+}
+
+#search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+#data-table {
+    font-size: 1rem;
+    border: 1px solid white;
+    margin: 5px;
+    border-collapse: collapse;
+}
+
+#coin-info{
+    text-align: center;
+    margin: 15px 0;
+}
+
+#btn-search{
+    padding: 5px;
+    background-color: white;
+}
