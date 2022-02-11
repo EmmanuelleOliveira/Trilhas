@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+body {
+    background-color: rgb(175, 199, 209);
+}
+
+#insertCep, #cep-info {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+    gap: 10px;
+}
+
+#cep {
+    width: 300px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#btn {
+    border-radius: 5px;
+    padding: 3px;
+}
+
+th{
+    padding: 10px;
+}
+
+td{
+    border-top: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+#table-cep-info {
+    font-size: 1rem;
+    border: 1px solid black;
+    margin: 5px;
+    border-collapse: collapse;
+}
+
+#map{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
