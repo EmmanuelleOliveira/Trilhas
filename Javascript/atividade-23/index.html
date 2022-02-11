@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="calculator">
+        <div id="display"></div>
+        <div id="buttons">
+            <div id="first">
+                <button type="button" class="btn-bigger" id="clear" onclick="clearCalculator()">C/AC</button>
+                <button type="button" class="btn" id="off" onclick="turnOff()">OFF</button>
+                <button type="button" class="btn" id="division">/</button>
+            </div>
+            <div id="second">
+                <button type="button" id="seven" class="btn" value="7">7</button>
+                <button type="button" id="eight" class="btn" value="8">8</button>
+                <button type="button" id="nine" class="btn" value="9">9</button>
+                <button type="button" id="multiplication" class="btn" value="*">*</button>
+            </div>
+            <div id="third">
+                <button type="button" id="four" class="btn" value="4">4</button>
+                <button type="button" id="five" class="btn" value="5">5</button>
+                <button type="button" id="six" class="btn" value="6">6</button>
+                <button type="button" id="subtraction" class="btn" value="-">-</button>
+            </div>
+            <div id="fourth">
+                <button type="button" id="one" class="btn" value="1">1</button>
+                <button type="button" id="two" class="btn" value="2">2</button>
+                <button type="button" id="three" class="btn" value="3">3</button>
+                <button type="button" id="addition" class="btn" value="+">+</button>
+            </div>
+            <div id="fifth">
+                <button type="button" id="zero" class="btn" value="0">0</button>
+                <button type="button" id="dot" class="btn" value=".">.</button>
+                <button type="button" id="equal" class="btn-bigger" onclick="getResult()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
