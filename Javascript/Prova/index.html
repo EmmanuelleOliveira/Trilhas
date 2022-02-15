@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prova</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <table id="moradores">
         <thead>
             <tr>
                 <th>Moradores</th>
+                <th>Torre</th>
+                <th>Apartamento</th>
+                <th>Andar</th>
                 <th>Presença</th>
             </tr>
         </thead>
         <tbody id="body-table"></tbody>
     </table>
-    <button type="button" id="list-moradores" onclick="show()">Mostrar lista de moradores</button>
+    <button type="button" id="list-closed">Fechar lista</button>
     <table id="moradores-presentes">
         <thead>
             <th>Presença confirmada</th>
@@ -24,7 +28,7 @@
             <th>Apartamento</th>
             <th>Andar</th>
         </thead>
-        <tbody id="moradores-presentes"></tbody>
+        <tbody id="moradores-presentes-table"></tbody>
     </table>
     <script src="script.js"></script>
 </body>

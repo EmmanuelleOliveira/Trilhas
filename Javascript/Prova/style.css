@@ -1,0 +1,17 @@
+th {
+    padding: 5px;
+}
+  
+td {
+    border-top: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+  
+#moradores, #moradores-presentes {
+    font-size: 1rem;
+    border: 1px solid black;
+    margin: 5px;
+    border-collapse: collapse;
+}
+  

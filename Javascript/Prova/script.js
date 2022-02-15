@@ -42,13 +42,28 @@ const moradores = [{
     andar: 1
 }];
 
-const tableBody = document.getElementById ("body-table");
-function show(){
-    for(let i = 0; i < moradores.length; i ++){
-        tableBody.innerHTML += `<tr><td>${moradores[i].nome}</td><td><button type="button" onclick="present()">Confirmar presença</button></td></tr>`;
-    }
+const tableBody = document.getElementById("body-table");
+const tableBody2 = document.getElementById("moradores-presentes");
+
+function show() {
+  moradores.forEach(function(value, index) {
+    tableBody.innerHTML += `<tr><td>${value.nome}</td><td>${value.torre}</td><td>${value.apartamento}</td><td>${value.andar}</td><td><button type="button" id="btn${index}" onclick="present(${index})">Confirmar presença</button></td></tr>`;
+  })
+  document.getElementById("list-closed").addEventListener("click", closedList);
 }
 
-function present() {
-    
+const moradoresPresentes = [];
+
+function present(i) {
+  moradoresPresentes.push(moradores[i]);
+  document.getElementById(`btn${i}`).disabled = true;
 }
+
+function closedList() {
+  moradoresPresentes.forEach(function(value, index) {
+    tableBody2.innerHTML += `<tr><td>${value.nome}</td><td>${value.torre}</td><td>${value.apartamento}</td><td>${value.andar}</td></tr>`;
+  })
+  document.getElementById(`list-closed`).disabled = true;
+}
+
+show();
