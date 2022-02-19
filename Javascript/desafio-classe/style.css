@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;  
+}
+
+@font-face {
+    font-family: spn;
+    src: url(./assets/fonts/Supernatural_Knight.ttf);
+}
+
+body {
+    font-family: spn, Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-image: url("./assets/images/spn.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    color: #a7a7a7;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#choose-characters {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 300px; 
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px; 
+} 
+
+#options-characters {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    width: 100vw;
+    height: 180px;
+}
+
+#text-character {
+    font-size: 20px;
+}
+
+#background-battle {
+    background-color: rgba(128, 128, 128, 0.568);
+    width: 80%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn {
+    background: none;
+    border: none;
+    font-family: spn, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    color: #a7a7a7;
+}
+
+/* .btn:hover {
+    color: ;
+} */
+ 
+.character {
+    width: 100px;
+    height: 180px;
+    /* border: 2px solid #a7a7a7;  */
+    cursor: pointer;
+    background-position-y: bottom;
+    background-position-x: center; 
+    background-size: 100px 180px;
+    background-repeat: no-repeat; 
+}
+
+#start {
+    background: none;
+    border: none; 
+    color: #a7a7a7;
+    font-family: spn, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#oponents-pictures {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+}
+
+#versus {
+    font-size: 30px;
+}
+
+#sam {
+    background-image: url("./assets/images/samalt.png");
+}
+
+#dean {
+    background-image: url("./assets/images/deanalt.png");
+}
+
+#castiel {
+    background-image: url("./assets/images/castielknife.png");
+}
+
+#bob {
+    background-image: url("./assets/images/bob.png");
+}
+
+#crowley {
+    background-image: url("./assets/images/crowleyalt.png");
+}
+
+#jo {
+    background-image: url("./assets/images/jo.png");
+}
+
+#meg {
+    background-image: url("./assets/images/meg.png");
+}
+
+#rowena {
+    background-image: url("./assets/images/rowena.png");
+}
+
+#lucifer {
+    background-image: url("./assets/images/lucifer.png");
+}
+
+#death {
+    background-image: url("./assets/images/death2.png");
+}
+
+#gabriel {
+    background-image: url("./assets/images/gabriel.png");
+}

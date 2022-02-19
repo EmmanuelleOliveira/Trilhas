@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio com uso de classe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+    <main>
+        <div id="name">
+            <h1>SUPERNATURAL</h1>
+            <h2>DEMONS AMONG US</h2>
+        </div>
+        <div id="choose-characters">
+            <button type="button" id="start">Iniciar</button>
+            <p id="text-character">Escolha um personagem</p>
+            <div id="options-characters">
+                <div class="character" id="dean" onclick="show(0)"></div>
+                <div class="character" id="sam" value="sam" onclick="show(1)"></div>
+                <div class="character" id="castiel" value="castiel" onclick="show(2)"></div>
+                <div class="character" id="crowley" value="crowley" onclick="show(3)"></div>
+                <div class="character" id="bob" value="bob" onclick="show(4)"></div>
+                <div class="character" id="lucifer" value="lucifer" onclick="show(5)"></div>
+                <div class="character" id="rowena" value="rowena" onclick="show(6)"></div>
+                <div class="character" id="death" value="death" onclick="show(7)"></div>
+                <div class="character" id="meg" value="meg" onclick="show(8)"></div>
+                <div class="character" id="gabriel" onclick="show(9)"></div>
+                <div class="character" id="jo" value="jo" onclick="show(10)"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
