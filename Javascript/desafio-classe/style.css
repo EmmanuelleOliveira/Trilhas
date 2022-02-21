@@ -58,8 +58,8 @@ main {
 
 #background-battle {
     background-color: rgba(128, 128, 128, 0.568);
-    width: 80%;
-    height: 400px;
+    width: 85vw;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,6 +132,7 @@ main {
 #result {
     margin-top: 10px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 #spn-symbol {
@@ -189,6 +190,7 @@ main {
 }
 
 #turn {
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
