@@ -11,10 +11,8 @@ class Hero {
       this.atkPower = 5 //Ataque base soco
       this.atkPowerSpecial = 10 //Ataque especial
     }
-    /*
-        Método que ajusta os pontos de ataque do personagem com base no seu tipo
-    */
-    dmgUp() {
+
+    dmgUp() { //Função que determina o dano sofrido ao oponente de acordo com a maior habilidade do personagem que está atacando no modo de ataque normal
         /*	
           Types: 
         1 - Agility
@@ -23,59 +21,65 @@ class Hero {
       */
       switch (this.type) {
         case 1:
-          return this.atkPower + (range (0, this.agi));
+          return this.atkPower + (this.range (0, this.agi));
           break;
   
         case 2:
-          return this.atkPower + (range (0, this.st));
+          return this.atkPower + (this.range (0, this.st));
           break;
   
         case 3:
-          return this.atkPower + (range (0, this.int));
+          return this.atkPower + (this.range (0, this.int));
           break;
       }
     }
-    specialDmgUp() {
+    specialDmgUp() { //Função que determina o dano sofrido ao oponente de acordo com a maior habilidade do personagem que está atacando no modo de ataque especial
       switch (this.type) {
         case 1:
-          return this.atkPowerSpecial + (range (0, this.agi));
+          return this.atkPowerSpecial + (this.range (0, this.agi));
           break;
   
         case 2:
-          return this.atkPowerSpecial + (range (0, this.st));
+          return this.atkPowerSpecial + (this.range (0, this.st));
           break;
   
         case 3:
-          return this.atkPowerSpecial + (range (0, this.int));
+          return this.atkPowerSpecial + (this.range (0, this.int));
           break;
       }
     }
 
-    attackTry() {
+    attackTry() { //Função que retorna um valor para atacar o oponente de acordo com a maior habilidade do personagem que está realizando o ataque
         switch (this.type) {
             case 1:
-              this.try = range(1,15) + this.agi
+              this.try = this.range(1,15) + this.agi
               return this.try
               break;
       
             case 2:
-                this.try = range(1,15) + this.st
+                this.try = this.range(1,15) + this.st
                 return this.try
               break;
       
             case 3:
-                this.try = range(1,15) + this.int
+                this.try = this.range(1,15) + this.int
                 return this.try
               break;
         }
     }
 
-    hpDown(dmgValue){
+    hpDown(dmgValue){ //Função que retorna o valor dos pontos de vida ao retirar o dano causado pelo ataque do oponente
       return this.newHp -= dmgValue;
+    }
+
+    range (min, max){ //Função que sorteia números aleatórios que é utilizada dentro da classe
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 }
 
-
+//Construção dos personagens
 const dean = new Hero ("Dean",1,4,3,2); 
 const sam = new Hero ("Sam",3,3,3,5);
 const castiel = new Hero ("Castiel",1,5,4,2);
@@ -88,13 +92,17 @@ const meg = new Hero ("Meg",2,2,4,3);
 const jo = new Hero ("Jo",2,1,2,1);
 const gabriel = new Hero ("Gabriel",3,4,4,5);
 
-
+//Armazenamento dos personagens em um vetor (objeto com suas propriedades)
 const characters = [dean, sam, castiel, crowley, bob, lucifer, rowena, death, meg, gabriel, jo];
+//Armazenamento dos nomes dos personagens para chamada do ID
 const pictures = ["dean", "sam", "castiel", "crowley", "bob", "lucifer", "rowena", "death", "meg", "gabriel", "jo"]; 
 
+//Armazenamento dos áudios do jogo em constantes
 const initialPageAudio = new Audio ("./assets/audio/spntema.mp3");
 const battleAudio = new Audio ("./assets/audio/battle.mp3");
 const winAudio = new Audio ("./assets/audio/road.mp3");
+
+//Reprodução do áudio ao entrar na página, definição de volume e loop
 initialPageAudio.play();
 initialPageAudio.volume = 0.2;
 initialPageAudio.addEventListener('ended', function() {
@@ -102,32 +110,40 @@ initialPageAudio.addEventListener('ended', function() {
   this.play();
 }, false);
 
-function range(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
+//Esconde o botão iniciar até que um personagem esteja selecionado
 $("#start").hide();
+
+//Declaração das variáveis globais 
 let positionPlayer = '';
 let positionOponent = '';
 let newHpOponentWidth = 1;
 let countPlayerAttack = 0;
 let countOponentAttack = 0;
 
+//Função que gera valores aleatórios para ser sorteado um personagem oponente
+function rangeRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+//Função que insere o nome do personagem na página inicial ao passar o mouse sobre a imagem correspondente
 function info(characterInfo) {
   $(`#${characterInfo}`).text(`${characterInfo}`); 
 }
 
+//Função que remove o nome do personagem na página inicial ao retirar o mouse da imagem correspondente
 function removeInfo(characterInfo) {
   $(`#${characterInfo}`).text(``); 
 }
 
+//Função que armazena a posição do personagem escolhido pelo jogador e mostra o botão iniciar em seguida
 function show (position) {
   positionPlayer = position; 
   $("#start").show();
 };
 
+//Função que monta a página de batalha ao clicar no botão de iniciar
 $("#start").click(function(){
   $("#choose-characters").hide();
   initialPageAudio.pause();
@@ -140,18 +156,20 @@ $("#start").click(function(){
   $("body").css({"background-image":'URL("./assets/images/angels.png")'});
   $("<div id='background-battle'></div>").appendTo("main");
   $("main").css({"justify-content":"flex-start", "align-items":"center", "gap":"30px", "color":"#dbb4a6"});
-  createOponent();
+  createOponent(); 
   fightConstruction();
 });
-  
+
+//Função que cria um oponente aleatório para a máquina que seja diferente da escolha do jogador
 function createOponent () {
-  let i = range (0,10);
+  let i = rangeRandom (0,10);
   while (i === positionPlayer){
-    i = range (0,10);
+    i = rangeRandom (0,10);
   }
   positionOponent = i;
 };
   
+//Função responsável por montar a batalha após a definição do oponente
 function fightConstruction() {
   $(`<div id = 'hps'><div id = 'hp-player'><b>${pictures[positionPlayer]}</b><div id = 'hp-player-internal'><div id = 'hp-player-external'></div></div></div><div id = 'spn-symbol' class = 'hp-images'></div><div id = 'hp-oponent'><b>${pictures[positionOponent]}</b><div id = 'hp-oponent-internal'><div id = 'hp-oponent-external'></div></div></div></div>`).appendTo("#background-battle");
   $(`<div id = 'oponents-pictures'><div class = "character" id=${pictures[positionPlayer]}></div><div id = "versus">VS</div><div class = "character" id=${pictures[positionOponent]}></div></div>`).appendTo("#background-battle");
@@ -162,6 +180,7 @@ function fightConstruction() {
   checkSpecialAttack ();
 };
 
+//Verifica se o jogador acertou 3 ataques normais no oponente para liberar o botão de ataque especial
 function checkSpecialAttack (){
   if (countPlayerAttack < 3) {
     $("#special-btn").hide();
@@ -170,6 +189,7 @@ function checkSpecialAttack (){
   }
 }
 
+//Movimentos do jogador no ataque normal
 function fightPlayer () {
   const btnAttack = document.getElementById("attack-btn");
   btnAttack.disabled = true;
@@ -177,9 +197,10 @@ function fightPlayer () {
     let attackTryPlayer = characters[positionPlayer].attackTry(); //Número de ataque do jogador
     let defenseTry = characters[positionOponent].def; //Número de defesa do oponente
     if (attackTryPlayer > defenseTry){ //Verifica se acertou o ataque para remover o dano
-      let damage = characters[positionPlayer].dmgUp();
-      let newHpOponent = characters[positionOponent].hpDown(damage);
-      newHpOponentWidth = (300*(newHpOponent)/characters[positionOponent].hp);
+      let damage = characters[positionPlayer].dmgUp(); //Número do dano causado
+      let newHpOponent = characters[positionOponent].hpDown(damage); //Número do valor atualizado dos pontos de vida após o dano
+      //Atualização da barra de vida, mostra o resultado e incrementa o contador de ataques bem sucedidos 
+      newHpOponentWidth = (300*(newHpOponent)/characters[positionOponent].hp); 
       $("#hp-oponent-external").css('width', newHpOponentWidth);
       $("#result").html(`${characters[positionPlayer].name} acertou o ataque em ${characters[positionOponent].name} e causou um dano de ${damage}`);
       countPlayerAttack++;
@@ -187,9 +208,9 @@ function fightPlayer () {
       $("#result").html(`${characters[positionPlayer].name} não acertou o ataque em ${characters[positionOponent].name}`);
     }
   };
-  if (characters[positionOponent].newHp > 0){
+  if (characters[positionOponent].newHp > 0){ //Verifica término do jogo ou se é a vez da máquina no modo de ataque normal ou especial
     $("#turn").html("Vez do oponente jogar");
-    if (countOponentAttack < 3){
+    if (countOponentAttack < 3){ 
       setTimeout(oponentTurn,2000);
     } else {
       setTimeout(oponentTurnSpecial,2000);
@@ -199,15 +220,17 @@ function fightPlayer () {
   }  
 };
 
+
+//Movimentos do jogador no ataque especial
 function fightPlayerSpecial (){
   const btnAttack = document.getElementById("attack-btn");
   btnAttack.disabled = true;
   $("#special-btn").hide();
   countPlayerAttack = 0;
   if (characters[positionOponent].newHp > 0) {
-    let attackTryPlayer = characters[positionPlayer].attackTry(); //Número de ataque do jogador
-    let defenseTry = characters[positionOponent].def; //Número de defesa do oponente
-    if (attackTryPlayer > defenseTry){ //Verifica se acertou o ataque para remover o dano
+    let attackTryPlayer = characters[positionPlayer].attackTry(); 
+    let defenseTry = characters[positionOponent].def; 
+    if (attackTryPlayer > defenseTry){ 
       let damage = characters[positionPlayer].specialDmgUp();
       let newHpOponent = characters[positionOponent].hpDown(damage);
       newHpOponentWidth = (300*(newHpOponent)/characters[positionOponent].hp);
@@ -217,7 +240,7 @@ function fightPlayerSpecial (){
       $("#result").html(`${characters[positionPlayer].name} não acertou o ataque especial em ${characters[positionOponent].name}`);
     }
   };
-  if (characters[positionOponent].newHp > 0){
+  if (characters[positionOponent].newHp > 0){ 
     $("#turn").html("Vez do oponente jogar");
     if (countOponentAttack < 3){
       setTimeout(oponentTurn,2000);
@@ -229,6 +252,7 @@ function fightPlayerSpecial (){
   } 
 }
 
+//Movimento da máquina no modo de ataque normal
 function oponentTurn () {
   const btnAttack = document.getElementById("attack-btn");
   btnAttack.disabled = true;
@@ -256,6 +280,7 @@ function oponentTurn () {
   }
 };
 
+//Movimento da máquina no modo de ataque especial 
 function oponentTurnSpecial () {
   const btnAttack = document.getElementById("attack-btn");
   btnAttack.disabled = true;
@@ -283,6 +308,7 @@ function oponentTurnSpecial () {
   }
 }
 
+//Montagem da página de vitória
 function winner (positionWinner) {
   battleAudio.pause(); 
   winAudio.play();
@@ -296,5 +322,3 @@ function winner (positionWinner) {
   $(`<div id = 'score'></div>`).appendTo("main");
   $("#score").html(`O vencedor da partida foi ${characters[positionWinner].name}!!`);
 }
-
- 
