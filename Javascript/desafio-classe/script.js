@@ -103,7 +103,7 @@ const characters = [dean, sam, castiel, crowley, bob, lucifer, rowena, death, me
 const pictures = ["dean", "sam", "castiel", "crowley", "bob", "lucifer", "rowena", "death", "meg", "gabriel", "jo"]; 
 
 //Armazenamento dos áudios do jogo em constantes
-const initialPageAudio = new Audio ("./assets/audio/spntema.mp3");
+const initialPageAudio = new Audio ("./assets/audio/spn.mp3");
 const battleAudio = new Audio ("./assets/audio/battle.mp3");
 const winAudio = new Audio ("./assets/audio/road.mp3");
 const atk = new Audio ("./assets/audio/atk.mp3");
@@ -187,7 +187,7 @@ function createOponent () {
   positionOponent = i;
 };
 
-//Função que aumentará os pontos de vida de foma aleatória;
+//Função que aumentará os pontos de vida de forma aleatória;
 function checkHealingTry (lifePoints){
   if (healingPlayer === 1 && lifePoints <= 50) {
     $("#healing-btn").show();
@@ -205,26 +205,18 @@ function checkSpecialAttack (){
   }
 }
 
-//Função que aumentará os pontos de vida de foma aleatória;
+//Função que aumentará os pontos de vida de forma aleatória;
 function healingTry(namePlayer) {
   const btnAttack = document.getElementById("attack-btn");
   btnAttack.disabled = true;
   const btnSpecialAttack = document.getElementById("special-btn");
   btnSpecialAttack.disabled = true;
   $("#healing-btn").hide();
-  console.log (newHpOponentWidth)
-  console.log (newHpPlayerWidth);
   let healingPx = rangeRandom(10,50);
-  console.log(healingPx);
   if (namePlayer === "oponent") {
-    console.log ("Oponente recupera hp")
-    console.log(characters[positionOponent].newHp)
     newHpOponentWidth += healingPx;
-    console.log(newHpOponentWidth);
     let conversionHP = ((healingPx * characters[positionOponent].hp)/300);
-    console.log(conversionHP);
     newHpOponent = characters[positionOponent].hpUp(conversionHP);
-    console.log (newHpOponent);
     heal.play();
     $("#result").html(`${characters[positionOponent].name} recupera alguns pontos de vida depois de ser curado por Deus`);
     $("#hp-oponent-external").css('width', newHpOponentWidth);
@@ -233,13 +225,9 @@ function healingTry(namePlayer) {
     btnSpecialAttack.disabled = false;
     $("#turn").html("Sua vez de jogar");
   } else {
-    console.log(characters[positionPlayer].newHp)
     newHpPlayerWidth += healingPx;
-    console.log(newHpPlayerWidth);
     let conversionHP = ((healingPx * characters[positionPlayer].hp)/300);
-    console.log(conversionHP);
     newHpPlayer = characters[positionPlayer].hpUp(conversionHP);
-    console.log (newHpPlayer);
     heal.play();
     $("#hp-player-external").css('width', newHpPlayerWidth);
     healingPlayer = 0;
@@ -270,7 +258,7 @@ function fightPlayer () {
       newHpOponentWidth = (300*(newHpOponent)/characters[positionOponent].hp); 
       $("#hp-oponent-external").css('width', newHpOponentWidth);
       atk.play();
-      $(`#oponents-pictures #${pictures[positionOponent]}`).effect("shake",{times:1},500);
+      $(`#oponents-pictures #${pictures[positionOponent]}`).effect("shake", {times:1} ,500);
       $("#result").html(`${characters[positionPlayer].name} acertou o ataque em ${characters[positionOponent].name} e causou um dano de ${damage}`);
       countPlayerAttack++;
     } else { //Não acertou o ataque
@@ -339,7 +327,6 @@ function oponentTurn () {
       let damage = characters[positionOponent].dmgUp();
       let newHpPlayer = characters[positionPlayer].hpDown(damage);
       newHpPlayerWidth = (300*(newHpPlayer)/characters[positionPlayer].hp);
-      console.log (newHpPlayerWidth);
       $("#hp-player-external").css('width',newHpPlayerWidth);
       atk.play();
       $(`#oponents-pictures #${pictures[positionPlayer]}`).effect("shake",{times:1},500);
@@ -372,7 +359,6 @@ function oponentTurnSpecial () {
       let damage = characters[positionOponent].specialDmgUp();
       let newHpPlayer = characters[positionPlayer].hpDown(damage);
       newHpPlayerWidth = (300*(newHpPlayer)/characters[positionPlayer].hp);
-      console.log (newHpPlayerWidth);
       $("#hp-player-external").css('width',newHpPlayerWidth);
       atk.play();
       $(`#oponents-pictures #${pictures[positionPlayer]}`).effect("shake",{times:1},500);
