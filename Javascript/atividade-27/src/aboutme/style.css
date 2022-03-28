@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: creepster;
+    src: url("./assets/fonts/Creepster-Regular.ttf");
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+h1 {
+    text-align: center;
+    font-family: creepster, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b5edfc;
+    margin: 20px 0 30px 0;
+    font-size: 40px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./assets/images/rick.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+}
+
+#search {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-family: montserrat,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+#btn-search {
+    width: 13vw;
+    min-width: 170px;
+    padding: 3px;
+    border: 3px solid #b5edfc;
+    border-radius: 10px;
+    font-family: montserrat,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+}
+
+#id-character {
+    width: 13vw;
+    min-width: 170px;
+    padding: 3px;
+    border: 3px solid #b5edfc;
+    border-radius: 10px;
+    text-align: center;
+    font-family: montserrat,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+}
+
+#search-input-btn {
+    display: flex;
+    gap: 10px;
+}
+
+#search-result-text{
+    text-align: center;
+    font-family: montserrat,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+}

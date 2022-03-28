@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso da API de Rick and Morty com uso de async await</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pesquisa utilizando API de Rick and Morty</h1>
+    <section id="search">
+        <p>Insira um número de 1 a 826 no campo ID para pesquisar o personagem correspondente</p>
+        <div id="search-input-btn">
+            <input type="number" name="id-character" id="id-character" min="1" max="826" placeholder="Insira um ID">
+            <button id="btn-search" onclick="selectCharacter()">Procurar personagem</button>
+        </div>
+    </section>
+    <section id="search-result">
+        <div id="search-result-text"></div>
+        <img id="character-picture">
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
