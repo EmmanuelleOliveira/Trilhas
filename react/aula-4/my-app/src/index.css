@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; 
+}
+
+#root {
+  width: 100vw;
+  display: flex;
+  flex-direction: column; 
+  background: #e7e7e7;
+  align-items: center; 
+}
+
+header {
+  height: 63px;
+  width: 100%;
+  background-color: #0acd86;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar {
+  width: calc(100vw - 170px);
+  height: auto;
+  background: #F2F2F2;
+  margin-bottom: 160px; 
+  overflow-y: hidden;
+  display: flex;
+  padding: 50px;
+  justify-content: flex-start;
+  gap: 60px;
+}
+
+.logo {
+  height: 100%;
+  width: 120px;
+  background-color: #0aab6b;
+}
+
+.user {
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.user-img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.nav-bar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.form-field {
+  height: auto;
+  width: calc(100vw - 170px);
+  background-color: #F2F2F2;
+  margin-top: 29px;
+  margin-bottom: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 43px;
+  padding: 30px;
+}
+
+.left-inputs {
+  height: 103px;
+  width: 774px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-y: hidden;
+}
+
+.input-description {
+  width: 100%;
+  height: 41px;
+  padding-left: 23px;
+  font-family: 'Jockey One', Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #d2d2d2;
+  border-radius: 18px;
+  border: none;
+  background: white;
+  margin-bottom: 21px;
+}
+
+.input-local, .input-date {
+  width: 340px;
+  height: 41px;
+  padding: 0 23px;
+  font-family: 'Jockey One', Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #d2d2d2;
+  border-radius: 18px;
+  border: none;
+  background: white;
+}
+
+.right-buttons {
+  height: 103px;
+  width: 282px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  height: 41px;
+  width: 160px;
+  font-family: 'Jockey One', Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #0aab6b;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, .selected {
+  background: #FFFFFF;
+  border-radius: 34px;
+}
+
+.btn-add, .btn-clear {
+  width: 100%;
+  color: white;
+  border-radius: 34px;
+}
+
+.btn-add {
+  background: #0aab6b;
+}
+
+.btn-clear {
+  background: #e1b84f;
+}
+
+.card {
+  width: 327px;
+  height: 183px;
+  background: white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Jockey One', Verdana, Arial, Helvetica, sans-serif;
+  color: #d2d2d2;
+}
+
+.card span {
+  color: #0acd86;
+}
