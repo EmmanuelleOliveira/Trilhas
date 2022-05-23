@@ -44,13 +44,8 @@ function Main() {
         setTask(task);
         setDeadline(deadline);
         setStatus(status);
-        if(status === 'todo') {
-            deleteTask(index, status);
-        } else if (status === 'doing') {
-            deleteTask(index, status);
-        } else {
-            deleteTask(index, status);
-        } 
+        console.log(status, index);
+        deleteTask(index, status);
     }
 
     function deleteTask(ind, st) {
@@ -58,7 +53,7 @@ function Main() {
         if(st === 'todo') {
             let removeTask = doCards.filter((t,i) => i !== ind)
             setDoCards(removeTask);
-        }  else if (status === 'doing') {
+        }  else if (st === 'doing') {
             let removeTask = doingCards.filter((t,i) => i !== ind)
             setDoingCards(removeTask);
         } else {

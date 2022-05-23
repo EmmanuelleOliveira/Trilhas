@@ -3,7 +3,6 @@ import {GrEdit} from 'react-icons/gr';
 import {RiDeleteBinLine} from 'react-icons/ri';
 
 function Cards(props) {
-    console.log("card")
     return (
         <div className='card-task'>
             <div className="description">
