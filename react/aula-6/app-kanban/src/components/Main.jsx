@@ -53,16 +53,16 @@ function Main() {
         } 
     }
 
-    function deleteTask(index, status) {
-        console.log(index)
-        if(status === 'todo') {
-            let removeTask = doCards.filter((t,i) => i !== index)
+    function deleteTask(ind, st) {
+        console.log(ind, st)
+        if(st === 'todo') {
+            let removeTask = doCards.filter((t,i) => i !== ind)
             setDoCards(removeTask);
         }  else if (status === 'doing') {
-            let removeTask = doingCards.filter((t,i) => i !== index)
+            let removeTask = doingCards.filter((t,i) => i !== ind)
             setDoingCards(removeTask);
         } else {
-            let removeTask = doneCards.filter((t,i) => i !== index)
+            let removeTask = doneCards.filter((t,i) => i !== ind)
             setDoneCards(removeTask);
         } 
     }
@@ -80,15 +80,15 @@ function Main() {
                 <div className='tasks'>
                     <div className='red-cards'>
                         <div className='to-do'>A Fazer</div>
-                        {doCards.map((card,index) => <Cards key={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
+                        {doCards.map((card,index) => <Cards key={index} index={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
                     </div>
                     <div className='yellow-cards'>
                         <div className='doing'>Fazendo</div>
-                        {doingCards.map((card,index) => <Cards key={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
+                        {doingCards.map((card,index) => <Cards key={index} index={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
                     </div>
                     <div className='green-cards'>
                         <div className='done'>Finalizado</div>
-                        {doneCards.map((card,index) => <Cards key={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
+                        {doneCards.map((card,index) => <Cards key={index} index={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
                     </div>
                 </div> 
             </section>
