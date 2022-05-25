@@ -30,7 +30,7 @@ export const Fieldset = Styled.fieldset`
     text-align: center;
     box-sizing: border-box;
     width: 210px;
-    height: 35px;
+    height: 40px;
     background: #FFFFFF;
     border-width: 0px 1px 1px 1px;
     border-style: solid;
@@ -56,7 +56,7 @@ export const Input = Styled.input`
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 10px;
     padding: 3px;
 
@@ -74,7 +74,7 @@ export const Select = Styled.select`
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 10px;
     padding: 3px;
 

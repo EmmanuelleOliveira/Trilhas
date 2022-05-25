@@ -5,7 +5,7 @@ import {CardTask, InfoTitle, IconsBtn} from './style';
 
 function Cards(props) {
     return (
-        <CardTask>
+        <CardTask className='cardtask'>
             <div className="description">
             <InfoTitle>Descrição:</InfoTitle>
             <span>{props.task}</span>

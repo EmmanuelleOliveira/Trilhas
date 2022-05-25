@@ -8,8 +8,8 @@ export const CardTask = Styled.div`
     align-items: flex-start;
     gap: 10px;
     font-family: 'Roboto';
-    font-size: 14px;
-    padding: 3px;
+    font-size: 16px;
+    padding: 5px;
 `;
 
 export const InfoTitle = Styled.p`

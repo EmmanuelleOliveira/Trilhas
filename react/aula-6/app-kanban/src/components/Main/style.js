@@ -58,6 +58,8 @@ export const TasksName = Styled.div`
 export const CardsContainer = Styled.div`
     width: 250px;
     height: auto;
-    background-color: ${props => props.redcards ? '#FFD0D0' : props.yellowcards ? '#FFFDCE' : '#DFFAE8'};
-    border: 1px solid ${props => props.redcards ? '#D21B1B' : props.yellowcards ? '#DFD600' : '#0CE155'};
+    .cardtask {
+        background-color: ${props => props.redcards ? '#FFD0D0' : props.yellowcards ? '#FFFDCE' : '#DFFAE8'};
+        border: 1px solid ${props => props.redcards ? '#D21B1B' : props.yellowcards ? '#DFD600' : '#0CE155'};
+    }
 `;
