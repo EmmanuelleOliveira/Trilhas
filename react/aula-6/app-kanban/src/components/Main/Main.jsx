@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import Form from './Form';
-import Cards from './Cards';
+import Form from '../Form/Form';
+import Cards from '../cards/Cards';
+/* import {MainStyle, H2} from './style' */
+import {MainStyle, H2, TasksContainer, TasksName, CardsContainer} from './style'
 
 function Main() {
     const [task, setTask] = useState('');
@@ -63,7 +65,7 @@ function Main() {
     }
 
     return (
-        <main>
+        <MainStyle>
             <Form 
                 task = {task} deadline = {deadline} status = {status}
                 setTask = {setTask} setDeadline = {setDeadline} setStatus = {setStatus}
@@ -71,23 +73,23 @@ function Main() {
             >
             </Form>
             <section>
-                <h2>Quadro de tarefas</h2>
-                <div className='tasks'>
-                    <div className='red-cards'>
-                        <div className='to-do'>A Fazer</div>
+                <H2>Quadro de tarefas</H2>
+                <TasksContainer>
+                    <CardsContainer redcards>
+                        <TasksName todo>A Fazer</TasksName>
                         {doCards.map((card,index) => <Cards key={index} index={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
-                    </div>
-                    <div className='yellow-cards'>
-                        <div className='doing'>Fazendo</div>
+                    </CardsContainer>
+                    <CardsContainer yellowcards>
+                        <TasksName doing>Fazendo</TasksName>
                         {doingCards.map((card,index) => <Cards key={index} index={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
-                    </div>
-                    <div className='green-cards'>
-                        <div className='done'>Finalizado</div>
+                    </CardsContainer>
+                    <CardsContainer greencards>
+                        <TasksName done>Finalizado</TasksName>
                         {doneCards.map((card,index) => <Cards key={index} index={index} task={card.task} deadline={card.deadline} status={card.status} deleteTask={deleteTask} editTask={editTask}></Cards>)}
-                    </div>
-                </div> 
+                    </CardsContainer>
+                </TasksContainer> 
             </section>
-        </main>
+        </MainStyle>
     )
 }
 
