@@ -8,7 +8,7 @@ function App() {
     <header>
       <h1>Gerenciador de Tarefas - Kanban</h1>
     </header>
-    <Main></Main>
+    <Main />
     </>
   );
 }
