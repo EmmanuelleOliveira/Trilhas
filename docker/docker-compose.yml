@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  bd-docker:
+    image: postgres
+    container_name: postgres-docker
+    environment: 
+      POSTGRES_PASSWORD: "991930265"
+    restart: always
+    ports:
+      - 4000:5432
+    volumes:
+      - banco-docker:/var/lib/postgresql/data
+    networks:
+      - postgres-compose-network
+  app: 
+    image: imagem-node
+    container_name: meu_app
+    networks:
+      - postgres-compose-network
+    volumes:
+      - "C:\\Users\\emman\\OneDrive\\Área de Trabalho\\desafio-docker\\src:/app/src"
+    environment: 
+      POSTGRES_HOST: "postgres-docker"
+      POSTGRES_PORT: 4000
+      POSTGRES_DATABASE: "docker-bd-desafio"
+      POSTGRES_PASSWORD: "991930265"
+      POSTGRES_USER: "postgres"
+    ports:
+      - 3000:3000
+    depends_on:
+      - bd-docker
+volumes:
+  banco-docker:
+networks:
+  postgres-compose-network:
+    driver: bridge

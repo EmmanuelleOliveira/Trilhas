@@ -1,0 +1,15 @@
+const {Client} = require('pg');
+
+async function getClient() { 
+    const client = new Client({
+        host: process.env.POSTGRES_HOST,
+        port: parseInt(process.env.POSTGRES_PORT,10),
+        database: process.env.POSTGRES_DATABASE,
+        password: process.env.POSTGRES_PASSWORD,
+        user: process.env.POSTGRES_USER
+    });
+    await client.connect();
+    return client;
+}
+
+module.exports = {getClient};
