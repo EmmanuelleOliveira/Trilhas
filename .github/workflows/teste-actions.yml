@@ -1,0 +1,14 @@
+name: Learning Github actions
+
+on: [push, pull_request]
+
+jobs: 
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show a message
+        run: echo "Hello world!"
+      - name: Multiple commands
+        run: |
+          node -v
+          npm -v
